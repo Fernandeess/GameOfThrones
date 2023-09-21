@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/quiz.css">
+    <link rel="shortcut icon" href="../assets/icon/favicon.ico" type="image/x-icon">
+    <script src="../js/function.js"></script>
+    <title> Quiz Desafiador </title>
+</head>
+
+<body>
+    <header>
+        <h1> Quiz Desafiador </h1>
+    </header>
+    <main>
+        <div class="container">
+            <div class="quiz">
+                <div class="container" id="quizContainer">
+                    <div class="pergunta">
+                        <div class="divTitle">
+                            <h2 class="titlePergunta"> Quem é o " King of the North"?</h2>
+                        </div>
+                        <div class="options">
+                            <label class="containerOption">
+                                <input class="optionsQuestion1" type="radio" value="0" name="question" id="label1P1" />
+                                <label for="label1P1">
+                                    <p>1. Joffrey Baratheon</p>
+                                </label>
+                            </label>
+                            <label class="containerOption">
+                                <input class="optionsQuestion1" type="radio" value="0" name="question" id="label2P1" />
+                                <label for="label2P1">
+                                    <p>2. Eddard Stark</p>
+                                </label>
+                            </label>
+                            <label class="containerOption">
+                                <input class="optionsQuestion1" type="radio" value="100" name="question"
+                                    id="label3P1" />
+                                <label for="label3P1">
+                                    <p>3. Robb Stark</p>
+                                </label>
+                            </label>
+                            <label class="containerOption">
+                                <input class="optionsQuestion1" type="radio" value="0" name="question" id="label4P1" />
+                                <label for="label4P1">
+                                    <p>4. Mance Rayder,</p>
+                                </label>
+                            </label>
+                        </div>
+                        <button class="btnContinuar" onclick="questao01()">Continuar</button>
+                    </div>
+                    <div class="pergunta" style="display:none;">
+                        <div class="divTitle">
+                            <h2 class="titlePergunta"> 2 - Ехіѕtе umа саѕа dе Wеѕtеrоѕ quе о ѕеu brаѕãо é umа lulа
+                                dоurаdа ѕоbrе
+                                о рrеtо, оutrа é um lеãо ѕоbrе о vеrmеlhо е оutrа umа luа е um fаlсãо ѕоbrе um саmро
+                                аzul-сеlеѕtе. Quаіѕ ѕãо еѕѕаѕ саѕаѕ, rеѕресtіvаmеntе?
+                            </h2>
+                        </div>
+                        <div class="options">
+                            <label class="containerOption">
+                                <input class="optionsQuestion2" type="radio" value="100" name="question"
+                                    id="label1P2" />
+                                <label for="label1P2">
+                                    <p>1. Greyjoy, Lannister e Arryn</p>
+                                </label>
+                            </label>
+                            <label class="containerOption">
+                                <input class="optionsQuestion2" type="radio" value="0" name="question" id="label2P2" />
+                                <label for="label2P2">
+                                    <p>2. Baratheon, Targaryen e Greyjoy</p>
+                                </label>
+                            </label>
+                            <label class="containerOption">
+                                <input class="optionsQuestion2" type="radio" value="0" name="question" id="label3P2" />
+                                <label for="label3P2">
+                                    <p>
+                                        3. Tully, Lannister e Targaryen
+                                    </p>
+                                </label>
+                            </label>
+                            <label class="containerOption">
+                                <input class="optionsQuestion2" type="radio" value="0" name="question" id="label4P2" />
+                                <label for="label4P2">
+                                    <p>4. Baratheon, Targaryen e Greyjoy</p>
+                                </label>
+                            </label>
+                        </div>
+                        <button class="btnContinuar" onclick="questao02()">Continuar</button>
+                    </div>
+                    <div class="pergunta" style="display:none;">
+                        <div class="divTitle">
+                            <h2 class="titlePergunta"> 3 - Do mais velho para o mais novo, qual os nomes dos filhos de
+                                Ned
+                                Stark?
+                            </h2>
+                        </div>
+                        <div class="options">
+                            <label class="containerOption">
+                                <input class="optionsQuestion3" type="radio" value="0" name="question" id="label1P3" />
+                                <label for="label1P3">
+                                    <p>1. Robb Stark, Jon Snow, Sansa Stark, Bran Stark, Arya Stark e Rickon Stark</p>
+                                </label>
+                            </label>
+                            <label class="containerOption">
+                                <input class="optionsQuestion3" type="radio" value="0" name="question" id="label2P3" />
+                                <label for="label2P3">
+                                    <p>2. Jon Snow, Robb Stark, Sansa Stark, Bran Stark, Arya Stark e Rickon Stark</p>
+                                </label>
+                            </label>
+                            <label class="containerOption">
+                                <input class="optionsQuestion3" type="radio" value="100" name="question"
+                                    id="label3P3" />
+                                <label for="label3P3">
+                                    <p>
+                                        3. Robb Stark, Jon Snow, Sansa Stark, Arya Stark, Bran Stark e Rickon Stark
+                                    </p>
+                                </label>
+                            </label>
+                            <label class="containerOption">
+                                <input class="optionsQuestion3" type="radio" value="0" name="question" id="label4P3" />
+                                <label for="label4P3">
+                                    <p>4. Jon Snow, Robb Stark, Arya Stark, Bran Stark, Sansa Stark e Rickon Stark</p>
+                                </label>
+                            </label>
+                        </div>
+                        <button class="btnContinuar" onclick="questao03()">Continuar</button>
+                    </div>
+                    <div class="pergunta" style="display:none;">
+                        <div class="divTitle">
+                            <h2 class="titlePergunta">
+                                ]4 - Јоn rеѕоlvеu dеіхаr о соnfоrtо dа саѕа dе ѕеu раі Nеd Ѕtаrk е
+                                еnfrеntаr а durа vіdа nа Мurаlhа. Dеntrе аѕ mеdіdаѕ аbаіхо quаl é um јurаmеntо
+                                оbrіgаtórіо раrа
+                                ѕеr um Раtrulhеіrо dа Nоіte
+                            </h2>
+                        </div>
+                        <div class="options">
+                            <label class="containerOption">
+                                <input class="optionsQuestion4" type="radio" value="100" name="question"
+                                    id="label1P4" />
+                                <label for="label1P4">
+                                    <p>1. Não ter relações sexuais</p>
+                                </label>
+                            </label>
+                            <label class="containerOption">
+                                <input class="optionsQuestion4" type="radio" value="0" name="question" id="label2P4" />
+                                <label for="label2P4">
+                                    <p>2. Sacrificar um lobo</p>
+                                </label>
+                            </label>
+                            <label class="containerOption">
+                                <input class="optionsQuestion4" type="radio" value="0" name="question" id="label3P4" />
+                                <label for="label3P4">
+                                    <p>
+                                        3.Sempre honrar o nome da família
+                                    </p>
+                                </label>
+                            </label>
+                            <label class="containerOption">
+                                <input class="optionsQuestion4" type="radio" value="0" name="question" id="label4P4" />
+                                <label for="label4P4">
+                                    <p>4. Nunca caçar pela noite</p>
+                                </label>
+                            </label>
+                        </div>
+                        <button class="btnContinuar" onclick="questao04()">Continuar</button>
+                    </div>
+                    <div class="pergunta" style="display:none;">
+                        <div class="divTitle">
+                            <h2 class="titlePergunta"> 5 - Qual dessas famílias não é um dos Sete Reinos?
+                            </h2>
+                        </div>
+                        <div class="options">
+                            <label class="containerOption">
+                                <input class="optionsQuestion5" type="radio" value="0" name="question" id="label1P5" />
+                                <label for="label1P5">
+                                    <p>1. Tully</p>
+                                </label>
+                            </label>
+                            <label class="containerOption">
+                                <input class="optionsQuestion5" type="radio" value="0" name="question" id="label2P5" />
+                                <label for="label2P5">
+                                    <p>2. Stark </p>
+                                </label>
+                            </label>
+                            <label class="containerOption">
+                                <input class="optionsQuestion5" type="radio" value="0" name="question" id="label3P5" />
+                                <label for="label3P5">
+                                    <p>3. Targaryen</p>
+                                </label>
+                            </label>
+                            <label class="containerOption">
+                                <input class="optionsQuestion5" type="radio" value="100" name="question"
+                                    id="label4P5" />
+                                <label for="label4P5">
+                                    <p>4. Snow</p>
+                                </label>
+                            </label>
+                        </div>
+                        <button class="btnContinuar" onclick="questao05()">Continuar</button>
+                    </div>
+                    <div class="pergunta" style="display:none;">
+                        <div class="divTitle">
+                            <h2 class="titlePergunta"> 6 - Após a morte de Robert Baratheon, um novo rei foi nomeado,
+                                seu filho Joffrey. Quem era o nomeado pelo rei a ser seu sucessor?
+                            </h2>
+                        </div>
+                        <div class="options">
+                            <label class="containerOption">
+                                <input class="optionsQuestion6" type="radio" value="0" name="question" id="label1P6" />
+                                <label for="label1P6">
+                                    <p>1. Cersei Lannister</p>
+                                </label>
+                            </label>
+                            <label class="containerOption">
+                                <input class="optionsQuestion6" type="radio" value="0" name="question" id="label2P6" />
+                                <label for="label2P6">
+                                    <p>2. Tyrion Lannister</p>
+                                </label>
+                            </label>
+                            <label class="containerOption">
+                                <input class="optionsQuestion6" type="radio" value="100" name="question"
+                                    id="label3P6" />
+                                <label for="label3P6">
+                                    <p>
+                                        3. Eddard Stark
+                                    </p>
+                                </label>
+                            </label>
+                            <label class="containerOption">
+                                <input class="optionsQuestion6" type="radio" value="0" name="question" id="label4P6" />
+                                <label for="label4P6">
+                                    <p>4. Renly Baratheon</p>
+                                </label>
+                            </label>
+                        </div>
+                        <button class="btnContinuar" onclick="questaoFinal()" id="lastBTN">Continuar</button>
+                    </div>
+                    <div class="resultPanel" style="display:none;">
+                        <div class="container">
+                            <img src="" alt="" id="gifResult" style="width: 400px;"></img>
+
+                            <div id="showResult"></div>
+                            <div id="showPoints"></div>
+
+                            <a class="quizA" href="quiz3.html">Proximo</a>
+                        </div>
+                    </div>
+
+
+
+                </div>
+            </div>
+            <div class="panelRank" style="display:none;">
+                <h1>Rank Quiz Iniciante</h1>
+                <table id="tableRank">
+
+                    <th>Rank</th>
+                    <th>Nome</th>
+                    <th>Pontos</th>
+
+
+                </table>
+            </div>
+        </div>
+    </main>
+</body>
+<script>var validar = setInterval(() => validarSessao(), 2000)</script>
+<script src="../js/quiz2.js"></script>
+
+
+</html>

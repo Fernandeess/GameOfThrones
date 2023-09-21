@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Perfil</title>
+    <link rel="shortcut icon" href="../assets/icon/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../css/editarPerfil.css">
+</head>
+
+<body>
+    <main>
+        <div class="editarPanerl">
+            <div class="container">
+                <h1>Editar Perfil</h1>
+                <img style="display: none;" id="perfilImg" src=""
+                    alt="O link dessa imagem não carregou tente utilizar outro de preferencia de 200px por 200px">
+                <div id="addBio">
+                    <textarea placeholder="Escreva Sua Bio Aqui..." id="inpBio" maxlength="200"></textarea>
+
+                    <button onclick="enviarFormulario()" class="btnEnviar">Atualizar Bio</button>
+                </div>
+                <div id="addIMG">
+                    <textarea onchange="checkIMG()" placeholder="Adicione o link da sua imagem aqui..."
+                        id="inpImg"></textarea>
+
+                    <button onclick="enviarFormularioIMG()
+                    " class="e">Atualizar Imagem de perfil</button>
+                </div>
+                <div>
+                    <button id="btnSair" onclick="sair()">Voltar</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+</body>
+<script src="../js/perfil.js"></script>
+
+</html>

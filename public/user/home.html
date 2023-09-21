@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="../assets/icon/favicon.ico" type="image/x-icon" />
+    <title>Home</title>
+    <link rel="stylesheet" href="../css/home.css" />
+    <script src="../js/function.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body onload="getValues()">
+    <header>
+        <div class="container">
+            <div id="divPerfilImg">
+                <a id="linkHeader" href="perfil.html"><img src="" id="perfilImg" alt="" />
+                    <span id="username">username</span></a>
+            </div>
+            <div id="headerRight">
+                <div>
+                    <button id="sair" onclick="limparSessao()">Sair</button>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div id="quizPanel">
+            <h1>Quizzes</h1>
+
+            <div>
+                <a href="quiz1.html" class="quiz">Quiz Iniciante</a><a href="ranking1.html"><img
+                        src="../assets/icon/ranking.svg" alt=""></a>
+            </div>
+
+            <div>
+                <a href="quiz2.html" class="quiz">Quiz Desafiador</a><a href="ranking2.html"><img
+                        src="../assets/icon/ranking.svg" alt=""></a>
+            </div>
+
+            <div>
+                <a href="quiz3.html" class="quiz">Quiz Longo Inverno</a><a href="ranking3.html"><img
+                        src="../assets/icon/ranking.svg" alt=""></a>
+            </div>
+        </div>
+        <div id="panelQuiz">
+            <canvas id="casasGrafico"></canvas>
+        </div>
+    </main>
+</body>
+
+</html>
+
+<script>
+    var casaTargaryen = 0;
+    var casaStark = 0;
+    var casaLannister = 0;
+    var casaBaratheon = 0;
+    var validar = setInterval(() => validarSessao(), 2000);
+    var numeroMebrosCasa;
+    function getValues() {
+        username.innerHTML =
+            sessionStorage.NOME_USUARIO + " " + sessionStorage.CASA_USUARIO;
+        perfilImg.src = sessionStorage.IMG_PERFIL;
+    }
+
+    async function usuariosCasas() {
+        const response = await fetch(`/usuarios/listarUsuariosCasa`, {
+            method: "POST",
+            headers: {
+                "Content-type": "application/json",
+            },
+        });
+        console.log(response);
+        console.log(response);
+        console.log("Estou no then");
+        numeroMebrosCasa = await response.json();
+        console.log(numeroMebrosCasa);
+
+        if (response.ok) {
+            // window.location = "/user/perfil.html"
+            console.log("PEGUEI OS VALORES");
+
+            for (var i = 0; i < numeroMebrosCasa.length; i++) {
+                if (numeroMebrosCasa[i].idCasa.toString() == "1000") {
+                    console.log("Targaryen");
+                    casaTargaryen++;
+                }
+                if (numeroMebrosCasa[i].idCasa.toString() == "1001") {
+                    console.log("Stark");
+                    casaStark++;
+
+                }
+                if (numeroMebrosCasa[i].idCasa.toString() == "1002") {
+                    console.log("Baratheon");
+                    casaBaratheon++;
+                }
+                if (numeroMebrosCasa[i].idCasa.toString() == "1003") {
+                    console.log("Lannister");
+                    casaLannister++;
+                }
+                console.log(typeof numeroMebrosCasa[i].idCasa);
+            }
+        } else if (response.status == 404) {
+            console.log("Deu 404!");
+        } else {
+            throw (
+                "Houve um erro ao tentar pegar os valores das casas;" + response.status
+            );
+        }
+    }
+    usuariosCasas();
+    Chart.defaults.color = '#FFFFFF';
+
+    const ctx = document.getElementById("casasGrafico");
+
+    setTimeout(() => {
+        new Chart(ctx, {
+            type: "bar",
+            data: {
+                labels: ["Targeryan", "Stark", "Baratheon", "Lannister"],
+                datasets: [
+                    {
+                        label: "Numero de pessoas por casa",
+                        data: [casaTargaryen, casaStark, casaBaratheon, casaLannister],
+                        borderWidth: 1,
+                        backgroundColor: ['#880000', '#000000', '#F2C012', '#D6B36A'],
+
+                    },
+                ],
+            },
+            options: {
+                plugins: {
+                    title: {
+                        display: true,
+                        text: 'Usuarios Por Casa',
+                        fullSize: true,
+                        fontSize: 50
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                    },
+                },
+            },
+        });
+    }, 500);
+</script>

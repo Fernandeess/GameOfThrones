@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <script src="./js/function.js"></script>
+    <link rel="stylesheet" href="css/cadastro.css">
+    <link rel="shortcut icon" href="assets/icon/favicon.ico" type="image/x-icon">
+
+</head>
+
+<body>
+
+    <div id="background_1">
+        <header id="header">
+            <div class="container">
+                <div>
+                    <a href="index.html"><img src="assets/imgs/logo/logo.png" id="logo" alt=""></a>
+                </div>
+                <nav>
+                    <ul class="navList">
+                        <li><a href="index.html">Login</a></li>
+
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <div class="hero">
+            <div class="container">
+                <div class="form">
+                    <div class="container">
+                        <h1>Cadastrar</h1>
+                        <input type="email" id="inpEmail" maxlength="45" placeholder="Email">
+                        <input type="text" id="inpUsername" placeholder="Primeiro nome">
+                        <input type="password" id="inpPassword" placeholder="Senha" maxlength="25">
+                        <input type="password" id="inpConfirmPassword" placeholder="Senha confirmação" maxlength="25">
+                        <select name="Familia" id="inpFamilia">
+                            <option value="0">Selecione uma das casas</option>
+                            <option value="1000">Targaryen</option>
+                            <option value="1001">Stark</option>]
+                            <option value="1002">Lannister</option>
+                            <option value="1003">Baratheon</option>
+
+                        </select>
+                        <button onclick="cadastrar()">Cadastrar</button>
+                        <div id="div_aguardar" class="loading-div" style="display:none;">
+                            <img src="assets/circle-loading.gif" id="loading-gif">
+                        </div>
+                        <div id="div_erros_login" style="display:none;">
+
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <img src="assets/imgs/WinterIsComing.png" alt="" id="imgFrase1">
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div id="level1">
+                <a href="#">
+                    <img src="assets/imgs/logo/logo.png" alt="">
+                </a>
+                <h3>Projeto de pesquisa e inovação <br>
+                    2022</h3>
+                <a href="#header">Volte ao Inicio</a>
+            </div>
+            <div id="level2">
+                <h3>Fanpage de Game Of Thrones</h3>
+                <a href="https://gameofthrones.fandom.com/wiki/Game_of_Thrones_Wiki">Referência Bibliográfica <img
+                        src="assets/icon/fandom.png" alt=""></a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
+
+<script>
+    function cadastrar() {
+        div_erros_login.innerHTML = ""
+        // aguardar();
+        //Recupere o valor da nova input pelo nome do id
+        // Agora vá para o método fetch logo abaixo
+        var emailVar = inpEmail.value;
+        var usernameVar = inpUsername.value;
+        var senhaVar = inpPassword.value;
+        var confirmacaoSenhaVar = inpConfirmPassword.value;
+        var casaVar = inpFamilia.value;
+
+        if (usernameVar == "" && emailVar == "" && senhaVar == "" && confirmacaoSenhaVar == "" && casaVar == 0) {
+            // cardErro.style.display = "block"
+            //  alert("Mensagem de erro para todos os campos em branco");
+            div_erros_login.style = `display:block;`
+            div_erros_login.innerHTML = `Campos não podem estar vazio`
+            // finalizarAguardar();
+            return false;
+        }
+        if (usernameVar == "") {
+            div_erros_login.style = `display:block;`
+            div_erros_login.innerHTML = `Prencha o nome`
+            return false;
+        }
+        if (emailVar == "" && senhaVar == "") {
+            div_erros_login.style = `display:block;`
+            div_erros_login.innerHTML = `Email e senha não podem estar vazio`
+            return false;
+        }
+        if (emailVar == "") {
+            div_erros_login.style = `display:block;`
+            div_erros_login.innerHTML += `Email não pode estar vazio`
+            return false;
+        } if (emailVar.includes("@") == false) {
+            div_erros_login.style = `display:block;`
+            div_erros_login.innerHTML += `Email invalido`
+            return false;
+        }
+        if (senhaVar == "") {
+            div_erros_login.style = `display:block;`
+            div_erros_login.innerHTML += `Preencha o campo senha`
+            return false;
+        }
+        if (senhaVar != confirmacaoSenhaVar) {
+            div_erros_login.style = `display:block;`
+            div_erros_login.innerHTML += `Senha de confirmação errada`
+            return false;
+        }
+        if (casaVar == 0) {
+            div_erros_login.style = `display:block;`
+            div_erros_login.innerHTML += `Selecione uma das casas`
+            return false;
+        }
+
+
+
+        // Enviando o valor da nova input
+        fetch("/usuarios/cadastrar", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                // crie um atributo que recebe o valor recuperado aqui
+                // Agora vá para o arquivo routes/usuario.js
+                nomeServer: usernameVar,
+                emailServer: emailVar,
+                senhaServer: senhaVar,
+                casaServer: casaVar
+            })
+        }).then(function (resposta) {
+
+            console.log("resposta: ", resposta);
+
+            if (resposta.ok) {
+                // cardErro.style.display = "block";
+
+                alert("Cadastro realizado com sucesso! Redirecionando para tela de Login...");
+
+                setTimeout(() => {
+                    window.location = "index.html";
+                }, "2000")
+
+                // limparFormulario();
+                // finalizarAguardar();
+            } else {
+                throw ("Houve um erro ao tentar realizar o cadastro!");
+            }
+        }).catch(function (resposta) {
+            console.log(`#ERRO: ${resposta}`);
+            // finalizarAguardar();
+        });
+
+        return false;
+    }
+
+    // function sumirMensagem() {
+    //     cardErro.style.display = "none"
+    // }
+
+</script>

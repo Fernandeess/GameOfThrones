@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/quiz.css">
+    <script src="../js/function.js"></script>
+    <link rel="shortcut icon" href="../assets/icon/favicon.ico" type="image/x-icon">
+    <title> Quiz Longo Inverno </title>
+</head>
+
+<body>
+    <header>
+        <h1> Quiz Longo Inverno </h1>
+    </header>
+    <main>
+        <div class="container">
+            <div class="quiz">
+                <div class="container" id="quizContainer">
+                    <div class="pergunta">
+                        <div class="divTitle">
+                            <h2 class="titlePergunta">Durante a Longa Noite (cerca de 8000 anos atrás) um herói surgiu
+                                para lutar contra os Outros, como ele se chamava?</h2>
+                        </div>
+                        <div class="options">
+                            <label class="containerOption">
+                                <input class="optionsQuestion1" type="radio" value="0" name="question" id="label1P1" />
+                                <label for="label1P1">
+                                    <p>1. Brandon, o construtor</p>
+                                </label>
+                            </label>
+                            <label class="containerOption">
+                                <input class="optionsQuestion1" type="radio" value="0" name="question" id="label2P1" />
+                                <label for="label2P1">
+                                    <p>2. Aegon Targaryen</p>
+                                </label>
+                            </label>
+                            <label class="containerOption">
+                                <input class="optionsQuestion1" type="radio" value="100" name="question"
+                                    id="label3P1" />
+                                <label for="label3P1">
+                                    <p>3. Azor Ahai</p>
+                                </label>
+                            </label>
+                            <label class="containerOption">
+                                <input class="optionsQuestion1" type="radio" value="0" name="question" id="label4P1" />
+                                <label for="label4P1">
+                                    <p>4. Jon snow</p>
+                                </label>
+                            </label>
+                        </div>
+                        <button class="btnContinuar" onclick="questao01()">Continuar</button>
+                    </div>
+                    <div class="pergunta" style="display:none;">
+                        <div class="divTitle">
+                            <h2 class="titlePergunta"> 2 - Quem tortura e mutila Theon Greyjoy por ser um traidor?
+                            </h2>
+                        </div>
+                        <div class="options">
+                            <label class="containerOption">
+                                <input class="optionsQuestion2" type="radio" value="100" name="question"
+                                    id="label1P2" />
+                                <label for="label1P2">
+                                    <p>1. Ramsay Snow</p>
+                                </label>
+                            </label>
+                            <label class="containerOption">
+                                <input class="optionsQuestion2" type="radio" value="0" name="question" id="label2P2" />
+                                <label for="label2P2">
+                                    <p>2.Eddard Stark</p>
+                                </label>
+                            </label>
+                            <label class="containerOption">
+                                <input class="optionsQuestion2" type="radio" value="0" name="question" id="label3P2" />
+                                <label for="label3P2">
+                                    <p>
+                                        3. Tyrion Lannister
+                                    </p>
+                                </label>
+                            </label>
+                            <label class="containerOption">
+                                <input class="optionsQuestion2" type="radio" value="0" name="question" id="label4P2" />
+                                <label for="label4P2">
+                                    <p>4. Roose Bolton</p>
+                                </label>
+                            </label>
+                        </div>
+                        <button class="btnContinuar" onclick="questao02()">Continuar</button>
+                    </div>
+                    <div class="pergunta" style="display:none;">
+                        <div class="divTitle">
+                            <h2 class="titlePergunta"> 3 - Além da muralha, existe um perigo crescente cada vez mais
+                                forte e perigoso, que perigo é esse ?
+                            </h2>
+                        </div>
+                        <div class="options">
+                            <label class="containerOption">
+                                <input class="optionsQuestion3" type="radio" value="100" name="question"
+                                    id="label1P3" />
+                                <label for="label1P3">
+                                    <p>1. Os Outros</p>
+                                </label>
+                            </label>
+                            <label class="containerOption">
+                                <input class="optionsQuestion3" type="radio" value="0" name="question" id="label2P3" />
+                                <label for="label2P3">
+                                    <p>2. Os selvagens</p>
+                                </label>
+                            </label>
+                            <label class="containerOption">
+                                <input class="optionsQuestion3" type="radio" value="0" name="question" id="label3P3" />
+                                <label for="label3P3">
+                                    <p>
+                                        3. Filhos da floresta
+                                    </p>
+                                </label>
+                            </label>
+                            <label class="containerOption">
+                                <input class="optionsQuestion3" type="radio" value="0" name="question" id="label4P3" />
+                                <label for="label4P3">
+                                    <p>4. O corvo</p>
+                                </label>
+                            </label>
+                        </div>
+                        <button class="btnContinuar" onclick="questao03()">Continuar</button>
+                    </div>
+                    <div class="pergunta" style="display:none;">
+                        <div class="divTitle">
+                            <h2 class="titlePergunta">
+                                4 - Durante a ERA DOS HERÓIS, seres misteriosos entregavam a Patrulha da Noite cem
+                                adagas de obsidiana todos os anos. Que seres eram esses?
+                            </h2>
+                        </div>
+                        <div class="options">
+                            <label class="containerOption">
+                                <input class="optionsQuestion4" type="radio" value="0" name="question" id="label1P4" />
+                                <label for="label1P4">
+                                    <p>1. Ferreiros de Valíria</p>
+                                </label>
+                            </label>
+                            <label class="containerOption">
+                                <input class="optionsQuestion4" type="radio" value="0" name="question" id="label2P4" />
+                                <label for="label2P4">
+                                    <p>2. Os primeiros homens</p>
+                                </label>
+                            </label>
+                            <label class="containerOption">
+                                <input class="optionsQuestion4" type="radio" value="0" name="question" id="label3P4" />
+                                <label for="label3P4">
+                                    <p>
+                                        3. Gigantes
+                                    </p>
+                                </label>
+                            </label>
+                            <label class="containerOption">
+                                <input class="optionsQuestion4" type="radio" value="100" name="question"
+                                    id="label4P4" />
+                                <label for="label4P4">
+                                    <p>4. Os Filhos da Floresta</p>
+                                </label>
+                            </label>
+                        </div>
+                        <button class="btnContinuar" onclick="questao04()">Continuar</button>
+                    </div>
+                    <div class="pergunta" style="display:none;">
+                        <div class="divTitle">
+                            <h2 class="titlePergunta"> 5 - Vаgаntеѕ Вrаnсоѕ ѕãо сrіаturаѕ lеtаіѕ е mіѕtеrіоѕаѕ, ѕãо
+                                muіtо роdеrоѕоѕ е рrаtісаmеntе іnvеnсívеіѕ, ѕãо роuсаѕ аѕ frаquеzаѕ соnhесіdаѕ
+                                аtuаlmеntе. Quаіѕ ѕãо еѕѕаѕ frаquеzаѕ?
+                            </h2>
+                        </div>
+                        <div class="options">
+                            <label class="containerOption">
+                                <input class="optionsQuestion5" type="radio" value="0" name="question" id="label1P5" />
+                                <label for="label1P5">
+                                    <p>1. Apenas um Vagante pode matar outro Vagante</p>
+                                </label>
+                            </label>
+                            <label class="containerOption">
+                                <input class="optionsQuestion5" type="radio" value="0" name="question" id="label2P5" />
+                                <label for="label2P5">
+                                    <p>2. Dragões, Espadas quebradas e Aranhas de Gelo </p>
+                                </label>
+                            </label>
+                            <label class="containerOption">
+                                <input class="optionsQuestion5" type="radio" value="0" name="question" id="label3P5" />
+                                <label for="label3P5">
+                                    <p>3. Gelo e Magia.</p>
+                                </label>
+                            </label>
+                            <label class="containerOption">
+                                <input class="optionsQuestion5" type="radio" value="100" name="question"
+                                    id="label4P5" />
+                                <label for="label4P5">
+                                    <p>4. Aço Valíriano, fogo e Vidro de Dragão</p>
+                                </label>
+                            </label>
+                        </div>
+                        <button class="btnContinuar" onclick="questao05()">Continuar</button>
+                    </div>
+                    <div class="pergunta" style="display:none;">
+                        <div class="divTitle">
+                            <h2 class="titlePergunta"> 6 - Qual casa traiu a Família Stark tomando assim a guarda e o
+                                dominio do norte ?
+                            </h2>
+                        </div>
+                        <div class="options">
+                            <label class="containerOption">
+                                <input class="optionsQuestion6" type="radio" value="0" name="question" id="label1P6" />
+                                <label for="label1P6">
+                                    <p>1. Lannister</p>
+                                </label>
+                            </label>
+                            <label class="containerOption">
+                                <input class="optionsQuestion6" type="radio" value="0" name="question" id="label2P6" />
+                                <label for="label2P6">
+                                    <p>2. Tarly</p>
+                                </label>
+                            </label>
+                            <label class="containerOption">
+                                <input class="optionsQuestion6" type="radio" value="100" name="question"
+                                    id="label3P6" />
+                                <label for="label3P6">
+                                    <p>
+                                        3. Bolton
+                                    </p>
+                                </label>
+                            </label>
+                            <label class="containerOption">
+                                <input class="optionsQuestion6" type="radio" value="0" name="question" id="label4P6" />
+                                <label for="label4P6">
+                                    <p>4. Greyjoy</p>
+                                </label>
+                            </label>
+                        </div>
+                        <button class="btnContinuar" onclick="questaoFinal()" id="lastBTN">Continuar</button>
+                    </div>
+                    <div class="resultPanel" style="display:none;">
+                        <div class="container">
+                            <img src="" alt="" id="gifResult" style="width: 400px;"></img>
+
+                            <div id="showResult"></div>
+                            <div id="showPoints"></div>
+
+                            <a class="quizA" href="home.html">Fim</a>
+                        </div>
+                    </div>
+
+
+
+                </div>
+            </div>
+            <div class="panelRank" style="display:none;">
+                <h1>Rank Quiz Iniciante</h1>
+                <table id="tableRank">
+
+                    <th>Rank</th>
+                    <th>Nome</th>
+                    <th>Pontos</th>
+
+
+                </table>
+            </div>
+        </div>
+    </main>
+</body>
+<script>var validar = setInterval(() => validarSessao(), 2000)</script>
+<script src="../js/quiz3.js"></script>
+
+
+</html>

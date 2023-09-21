@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Perfil</title>
+    <link rel="shortcut icon" href="../assets/icon/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../css/perfil.css">
+    <script src="../js/function.js"></script>
+</head>
+
+<body onload="getValues()">
+    <div id="slideBTN" onclick="slideShow()">
+        <div class="lines"></div>
+        <div class="lines"></div>
+        <div class="lines"></div>
+    </div>
+    <div id="sideMenu" onmouseleave="slideOff()">
+        <div class="container">
+            <img src="../assets/icon/game-of-thrones-logo-large.png" alt="">
+            <a href="home.html">Home</a>
+            <a href="quiz1.html">Quiz 1</a>
+            <a href="quiz1.html">Quiz 2</a>
+            <a href="quiz3.html">Quiz 3</a>
+        </div>
+
+    </div>
+
+    <header id="headerImg">
+        <h1 id="lemaH1">Lema</h1>
+
+    </header>
+    <div class="infoPessoa">
+        <img id="perfilImg" src="" alt="Imagem de Perfil">
+
+        <h2 id="username">Nome</h2> <a href="editarPerfil.html" id="editPerfilLink"><img src="../assets/editIMG.png"
+                alt=""> Editar Perfil</a>
+    </div>
+
+    <main>
+
+        <div id="userInfo">
+            <div class="container">
+                <div id="bio">
+                    <h2 id="bioh2">
+                        Bio:
+                    </h2>
+                    <p id="getBio">
+                    </p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+</body>
+<script src="../js/perfil.js"></script>
+<script>var validar = setInterval(() => validarSessao(), 2000)</script>
+<script>
+    var contClicks = 0;
+    function getValues() {
+        var imgHeader = sessionStorage.BRASAO_CASA;
+        username.innerHTML = sessionStorage.NOME_USUARIO + " " + sessionStorage.CASA_USUARIO;
+        perfilImg.src = sessionStorage.IMG_PERFIL;
+        console.log(sessionStorage.BRASAO_CASA);
+        headerImg.style = `background: linear-gradient(133deg, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.1) 27%, rgba(0, 0, 0, 0.1) 100%), url("${imgHeader}") ;
+    background-size:auto;
+    background-position: center;`
+        lemaH1.innerHTML = sessionStorage.LEMA_CASA;
+    }
+    var validar = setInterval(() => validarSessao(), 300000);
+    getBio.innerHTML = sessionStorage.BIO_USUARIO;
+    function slideOff() {
+        setTimeout(() => {
+            sideMenu.style = `width:0vw;`
+            contClicks++
+        }, 2000)
+    }
+    var linhas = document.querySelectorAll(".lines")
+    function slideShow() {
+        contClicks++
+        if (contClicks % 2 == 0) {
+            sideMenu.style = `width:0vw;`
+            for (var i = 0; i <= linhas.length; i++) {
+                linhas[i].style = "background-color: #dbdbdb;"
+
+            }
+        } else {
+            sideMenu.style = `width:15vw;`
+            for (var i = 0; i < linhas.length; i++) {
+                linhas[i].style = "background-color: black;"
+
+            }
+        }
+        console.log(contClicks)
+
+    }
+
+</script>
+
+</html>

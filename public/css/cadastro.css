@@ -1,0 +1,241 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+textarea:focus, input:focus, select:focus {
+  box-shadow: 0 0 0 0;
+  border: 0 none;
+  outline: 0;
+} 
+
+@font-face {
+  font-family: got;
+  src: url('../fonts/gameofthrones.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+header {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  height: 15vh;
+  
+}
+
+header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 90%;
+}
+
+div #logo {
+  display: flex;
+
+}
+
+#header{
+  scroll-behavior: smooth;  
+}
+
+#logo {
+  width: 230px;
+  position: relative;
+  right: 10px;
+  z-index: +1;
+
+}
+
+header ul,
+li,
+a {
+  list-style: none;
+  color: white;
+  text-decoration: none;
+  font-family: 'got';
+}
+
+header nav ul {
+  display: flex;
+  justify-content: center;
+}
+
+.navList {
+  position: relative;
+  right: 50%;
+}
+
+.navList li a {
+
+  margin: 0px 20px;
+
+}
+.navList li a:hover {
+
+  color: rgb(205, 205, 205);
+
+}
+
+#background_1 {
+  background-image: url("../assets/imgs/bgCadastro.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 99vh;
+}
+
+.hero {
+  display: flex;
+  justify-content: center;
+  height: 95vh;
+}
+
+.hero .container {
+  width: 90%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+}
+
+
+.form {
+  background-color: #141414e0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 403px;
+  min-height: 650px;
+  height: fit-content;
+  max-height: 700px;
+  margin: 0px 50px 0px 30px;
+  
+}
+
+#imgFrase1,
+.form {
+  margin-bottom: 100px;
+}
+
+.form .container {
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.form {
+  align-items: center;
+  justify-content: center;
+  border-radius: 15px;
+}
+
+.form h1 {
+  font-size: 25px;
+  color: white;
+  font-family: 'got';
+  margin: 20px 0px;
+}
+
+.form input  {
+
+  width: 300px;
+  background-color: #14141400;
+  color: white;
+  border: none;
+  border-bottom: solid 2px #880000;
+  margin: 15.5px 0px;
+  padding: 0px 00px 15px 15px;
+  font-size: 24px;
+}
+.form select,option {
+
+  width: 300px;
+  background-color: #141414;
+  color: rgb(148, 148, 148);
+  border: none;
+  border-bottom: solid 2px #880000;
+  margin: 0x 0px;
+  padding: 0px 0px 15px 15px;
+  font-size: 24px;
+  box-shadow: 0px 0px 0px 0px;
+}
+
+.form button {
+  transition: 0.3s;
+  width: 250px;
+  height: 50px;
+  background-color: #880000;
+  border: none;
+  color: white;
+  margin: 15.5px 0px 15.5px 0px;
+  border-radius: 6px;
+  font-weight: bolder;
+  font-size: 17px;
+}
+.form button{
+  background-color: #ce0000;
+
+}
+
+.form button:hover {
+  transition: ease-in;
+  background-color: #9f0000;
+
+}
+
+.form input:focus {
+  outline: none;
+}
+.loading-div{
+  padding: 20px;
+  }
+  #loading-gif{
+    width: 50px;
+  }
+  #div_erros_login{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #9f0000;
+    font-weight: bold;
+    font-size: 25px;
+    margin: 20px 0px;
+    flex-direction: column;
+    text-align: center;
+  }
+#imgFrase1 {
+  width: 100%;
+}
+
+
+footer{
+  background-color: black;
+  color: white;
+  display: flex;
+  justify-content: center;
+}
+footer .container{
+  width: 90%;
+}
+#level1{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 30px 0px;
+  text-align: center;
+}
+#level2{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 30px 0px;
+}
+#level2 a{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

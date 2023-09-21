@@ -1,0 +1,243 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: #141414;
+    color: white;
+    background-image: url('../assets/imgs/background_4.png');
+    background-size: cover;
+    min-height: 100vh;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    padding: 40px 0px;
+}
+
+main {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main .container {
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.panelRank {
+    width: fit-content;
+    min-width: 600px;
+    background-color: #2c2c2c;
+    margin: 20px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 6px;
+    min-height: fit-content;
+    max-height: fit-content;
+}
+
+.panelRank h1 {
+    text-align: center;
+    margin: 20px 0px;
+}
+
+table {
+    border-collapse: collapse;
+    width: 600px;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    margin: 20px 20px;
+}
+
+td {
+    background-color: none;
+    border-left: 1px solid #2C2C2C;
+    border-right: 1px solid #2C2C2C;
+}
+
+th {
+    background-color: black;
+}
+
+td,
+th {
+    padding: 10px;
+}
+
+tbody {
+    background-color: #343434;
+}
+
+tbody:nth-child(odd) {
+    background-color: #414141;
+}
+
+.quiz {
+    width: 100%;
+    min-height: 70vh;
+    display: flex;
+    justify-content: center;
+}
+
+.quiz .container {
+    min-width: 320px;
+    max-width: 1200px;
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.pergunta {
+    min-width: 900px;
+    max-width: 900px;
+    background-color: #2c2c2c;
+    margin: 20px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 6px;
+}
+
+.divTitle {
+    display: flex;
+    width: 100%;
+    margin: 20px;
+    text-align: center;
+    justify-content: center;
+}
+
+.titlePergunta {
+    font-size: 30px;
+}
+
+.pergunta .options {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.containerOption {
+    margin: 20px 0px;
+    padding: 0px;
+    display: flex;
+    justify-content: center;
+}
+
+.containerOption label {
+    display: flex;
+    justify-content: center;
+}
+
+.containerOption p {
+    width: 95%;
+    text-align: left;
+}
+
+.containerOption input+label {
+    transition: 0.5s;
+    padding: 20px;
+    width: 90%;
+    border-radius: 6px;
+    background-color: #707070;
+}
+
+.containerOption input:hover+label:hover {
+    padding: 20px;
+    background-color: #000000;
+    width: 90%;
+    border-radius: 6px;
+}
+
+.containerOption input:checked+label {
+    padding: 20px;
+    background-color: #000000;
+    width: 90%;
+}
+
+.pergunta .options input {
+    display: none;
+}
+
+.btnContinuar {
+    transition: 0.5s;
+    padding: 20px 40px;
+    border-radius: 6px;
+    background-color: #000000;
+    border: none;
+    color: white;
+    font-weight: bold;
+}
+
+.btnContinuar:hover {
+    background-color: #ce0000;
+    font-weight: bold;
+}
+
+.resultPanel {
+    background-color: #2c2c2c;
+    min-width: 600px;
+    min-height: 400px;
+    display: flex;
+    justify-content: center;
+    border-radius: 6px;
+}
+
+.resultPanel .container {
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 30px 0px;
+}
+
+#showResult,
+#showPoints {
+    font-size: 30px;
+    margin: 0px 20px;
+    font-weight: bold;
+    text-align: center;
+}
+
+#pointBarra {
+    color: green;
+    display: inline-block;
+}
+
+#gifResult {
+    margin: 25px;
+}
+
+.quizA {
+    transition: 0.3s;
+    margin: 30px 0px;
+    width: 300px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #880000;
+    border-radius: 6px;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+}
+
+.quizA:hover {
+    background-color: #ce0000;
+}

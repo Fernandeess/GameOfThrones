@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/quiz.css">
+    <link rel="shortcut icon" href="../assets/icon/favicon.ico" type="image/x-icon">
+    <title> Quiz Iniciante </title>
+    <script src="../js/function.js"></script>
+</head>
+
+<body>
+    <header>
+        <h1> Quiz Iniciante </h1>
+    </header>
+    <main>
+        <div class="container">
+            <div class="quiz">
+                <div class="container" id="quizContainer">
+                    <div class="pergunta">
+                        <div class="divTitle">
+                            <h2 class="titlePergunta"> 1 - Qual foi a primeira cena apresentada na primeira temporada?
+                            </h2>
+                        </div>
+                        <div class="options">
+                            <label class="containerOption">
+                                <input class="optionsQuestion1" type="radio" value="0" name="question" id="label1P1" />
+                                <label for="label1P1">
+                                    <p>1. Winterfell</p>
+                                </label>
+                            </label>
+                            <label class="containerOption">
+                                <input class="optionsQuestion1" type="radio" value="100" name="question"
+                                    id="label2P1" />
+                                <label for="label2P1">
+                                    <p>2. A Muralha</p>
+                                </label>
+                            </label>
+                            <label class="containerOption">
+                                <input class="optionsQuestion1" type="radio" value="0" name="question" id="label3P1" />
+                                <label for="label3P1">
+                                    <p>3. King's landing</p>
+                                </label>
+                            </label>
+                            <label class="containerOption">
+                                <input class="optionsQuestion1" type="radio" value="0" name="question" id="label4P1" />
+                                <label for="label4P1">
+                                    <p>4. Correrio</p>
+                                </label>
+                            </label>
+                        </div>
+                        <button class="btnContinuar" onclick="questao01()">Continuar</button>
+                    </div>
+                    <div class="pergunta" style="display:none;">
+                        <div class="divTitle">
+                            <h2 class="titlePergunta"> 2 - Com quem Catelyn Tully se casaria antes de casar-se com Ned
+                                Stark?
+                            </h2>
+                        </div>
+                        <div class="options">
+                            <label class="containerOption">
+                                <input class="optionsQuestion2" type="radio" value="100" name="question"
+                                    id="label1P2" />
+                                <label for="label1P2">
+                                    <p>1. Brandon Stark</p>
+                                </label>
+                            </label>
+                            <label class="containerOption">
+                                <input class="optionsQuestion2" type="radio" value="0" name="question" id="label2P2" />
+                                <label for="label2P2">
+                                    <p>2. Petyr Baelish</p>
+                                </label>
+                            </label>
+                            <label class="containerOption">
+                                <input class="optionsQuestion2" type="radio" value="0" name="question" id="label3P2" />
+                                <label for="label3P2">
+                                    <p>
+                                        3. Jon Arryn
+                                    </p>
+                                </label>
+                            </label>
+                            <label class="containerOption">
+                                <input class="optionsQuestion2" type="radio" value="0" name="question" id="label4P2" />
+                                <label for="label4P2">
+                                    <p>4. Kevan Lannister</p>
+                                </label>
+                            </label>
+                        </div>
+                        <button class="btnContinuar" onclick="questao02()">Continuar</button>
+                    </div>
+                    <div class="pergunta" style="display:none;">
+                        <div class="divTitle">
+                            <h2 class="titlePergunta"> 3 - Quem deu os ovos de dragão para Danerys
+                            </h2>
+                        </div>
+                        <div class="options">
+                            <label class="containerOption">
+                                <input class="optionsQuestion3" type="radio" value="0" name="question" id="label1P3" />
+                                <label for="label1P3">
+                                    <p>1. Khal Drogo</p>
+                                </label>
+                            </label>
+                            <label class="containerOption">
+                                <input class="optionsQuestion3" type="radio" value="0" name="question" id="label2P3" />
+                                <label for="label2P3">
+                                    <p>2. Viserys Targaryen</p>
+                                </label>
+                            </label>
+                            <label class="containerOption">
+                                <input class="optionsQuestion3" type="radio" value="0" name="question" id="label3P3" />
+                                <label for="label3P3">
+                                    <p>
+                                        3. Jorah Mormont
+                                    </p>
+                                </label>
+                            </label>
+                            <label class="containerOption">
+                                <input class="optionsQuestion3" type="radio" value="100" name="question"
+                                    id="label4P3" />
+                                <label for="label4P3">
+                                    <p>4. Illyrio Mopatis</p>
+                                </label>
+                            </label>
+                        </div>
+                        <button class="btnContinuar" onclick="questao03()">Continuar</button>
+                    </div>
+                    <div class="pergunta" style="display:none;">
+                        <div class="divTitle">
+                            <h2 class="titlePergunta"> 4 - Qual Personagem e conhecido como regicida?
+                            </h2>
+                        </div>
+                        <div class="options">
+                            <label class="containerOption">
+                                <input class="optionsQuestion4" type="radio" value="0" name="question" id="label1P4" />
+                                <label for="label1P4">
+                                    <p>1. Jon Snow</p>
+                                </label>
+                            </label>
+                            <label class="containerOption">
+                                <input class="optionsQuestion4" type="radio" value="0" name="question" id="label2P4" />
+                                <label for="label2P4">
+                                    <p>2. Jorah Mormont</p>
+                                </label>
+                            </label>
+                            <label class="containerOption">
+                                <input class="optionsQuestion4" type="radio" value="0" name="question" id="label3P4" />
+                                <label for="label3P4">
+                                    <p>
+                                        3. Waymar Royce
+                                    </p>
+                                </label>
+                            </label>
+                            <label class="containerOption">
+                                <input class="optionsQuestion4" type="radio" value="100" name="question"
+                                    id="label4P4" />
+                                <label for="label4P4">
+                                    <p>4. Jamie Lannister</p>
+                                </label>
+                            </label>
+                        </div>
+                        <button class="btnContinuar" onclick="questao04()">Continuar</button>
+                    </div>
+                    <div class="pergunta" style="display:none;">
+                        <div class="divTitle">
+                            <h2 class="titlePergunta"> 5 - Qual o nome dos lobos dos filhos de Ned Stark.
+                            </h2>
+                        </div>
+                        <div class="options">
+                            <label class="containerOption">
+                                <input class="optionsQuestion5" type="radio" value="0" name="question" id="label1P5" />
+                                <label for="label1P5">
+                                    <p>1. Fantasma, Nymeria, Princesa, Monstro, Verão, Cão Felpudo</p>
+                                </label>
+                            </label>
+                            <label class="containerOption">
+                                <input class="optionsQuestion5" type="radio" value="0" name="question" id="label2P5" />
+                                <label for="label2P5">
+                                    <p>2. Fantasma, Nymeria, Princesa, Vento Cinzento, Verão, Cão </p>
+                                </label>
+                            </label>
+                            <label class="containerOption">
+                                <input class="optionsQuestion5" type="radio" value="0" name="question" id="label3P5" />
+                                <label for="label3P5">
+                                    <p>3. Fantasma, Nymeria, Princesa, Vento Azul, Verão, Cão Felpudo</p>
+                                </label>
+                            </label>
+                            <label class="containerOption">
+                                <input class="optionsQuestion5" type="radio" value="100" name="question"
+                                    id="label4P5" />
+                                <label for="label4P5">
+                                    <p>4. Fantasma, Nymeria, Princesa, Vento Cinzento, Verão, Cão Felpudo</p>
+                                </label>
+                            </label>
+                        </div>
+                        <button class="btnContinuar" onclick="questao05()">Continuar</button>
+                    </div>
+                    <div class="pergunta" style="display:none;">
+                        <div class="divTitle">
+                            <h2 class="titlePergunta"> 6 - Qual a frase dita por Daenerys Targaryen depois que Khal
+                                Drogo mata seu irmão Vyseris?
+                            </h2>
+                        </div>
+                        <div class="options">
+                            <label class="containerOption">
+                                <input class="optionsQuestion6" type="radio" value="0" name="question" id="label1P6" />
+                                <label for="label1P6">
+                                    <p>1. Uma Coroa para um rei</p>
+                                </label>
+                            </label>
+                            <label class="containerOption">
+                                <input class="optionsQuestion6" type="radio" value="0" name="question" id="label2P6" />
+                                <label for="label2P6">
+                                    <p>2. Fogo e Sangue</p>
+                                </label>
+                            </label>
+                            <label class="containerOption">
+                                <input class="optionsQuestion6" type="radio" value="100" name="question"
+                                    id="label3P6" />
+                                <label for="label3P6">
+                                    <p>
+                                        3. Ele não era um dragão. O fogo não pode matar um dragão
+                                    </p>
+                                </label>
+                            </label>
+                            <label class="containerOption">
+                                <input class="optionsQuestion6" type="radio" value="0" name="question" id="label4P6" />
+                                <label for="label4P6">
+                                    <p>4. No fim das contas, ele não possuía o sangue do dragão</p>
+                                </label>
+                            </label>
+                        </div>
+                        <button class="btnContinuar" onclick="questaoFinal()" id="lastBTN">Continuar</button>
+                    </div>
+                    <div class="resultPanel" style="display:none;">
+                        <div class="container">
+                            <img src="" alt="" id="gifResult" style="width: 400px;"></img>
+
+                            <div id="showResult"></div>
+                            <div id="showPoints"></div>
+
+                            <a class="quizA" href="quiz2.html">Proximo</a>
+                        </div>
+                    </div>
+
+
+
+                </div>
+            </div>
+            <div class="panelRank" style="display: none;">
+                <h1>Rank Quiz Iniciante</h1>
+                <table id="tableRank">
+
+                    <th>Rank</th>
+                    <th>Nome</th>
+                    <th>Pontos</th>
+
+
+                </table>
+            </div>
+        </div>
+    </main>
+</body>
+<script>var validar = setInterval(() => validarSessao(), 2000)</script>
+<script src="../js/quiz.js"></script>
+
+
+</html>

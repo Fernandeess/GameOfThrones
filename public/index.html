@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game of Thrones</title>
+    <script src="./js/function.js"></script>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="shortcut icon" href="assets/icon/favicon.ico" type="image/x-icon">
+</head>
+<body >
+    <div id="background_1">
+        <header id="header">
+            <div class="container">
+                <div>
+                    <a href="#header"><img src="assets/imgs/logo/logo.png" id="logo" alt=""></a>
+                </div>
+                <nav>
+                    <ul class="navList">
+                        <li><a href="cadastro.html">Cadastro</a></li>
+                        <li><a href="#sectionSobre">Sobre a serie</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <div class="hero">
+            <div class="container">
+                <div class="form">
+                    <div class="container">
+                        <h1>Log in</h1>
+                        <input type="email" id="inpEmail" placeholder="Email">
+                        <input type="password" id="inpSenha" placeholder="password">
+                        <button onclick="entrar()">Login</button>
+                        <div id="div_aguardar" class="loading-div" style="display:none;">
+                            <img src="assets/circle-loading.gif" id="loading-gif">
+                        </div>
+                        <div id="div_erros_login">
+                    
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <img src="assets/imgs/whenYou.png" alt="" id="imgFrase1">
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div id="sectionSobre">
+        <div class="container">
+            <div id="sobreText">
+                <h2>A Song of Ice and Fire</h2>
+                <p>As Crônicas de Gelo e Fogo (no original em inglês: A Song of Ice and Fire) é uma série de livros
+                    de
+                    fantasia
+                    épica escrita pelo romancista e roteirista norte-americano George R. R. Martin e publicada pela
+                    editora
+                    Bantam Spectra. Martin começou a desenvolvê-la em 1991 e o primeiro volume foi lançado em 1996.
+                    Originalmente concebida para ser uma trilogia, a saga agora consiste em cinco volumes
+                    publicados,
+                    com
+                    mais
+                    dois planejados. Há também três contos derivados e algumas novelas que consistem de resumos dos
+                    romances
+                    principais.</p>
+                <p>Há três argumentos principais na história, que se tornam cada vez mais interligados: a crônica de
+                    uma
+                    guerra
+                    civil dinástica entre várias famílias concorrentes pelo controle dos Sete Reinos; a ameaça
+                    crescente
+                    das
+                    criaturas sobrenaturais conhecidas como os Outros, que habitam além de uma imensa muralha de
+                    gelo ao
+                    Norte;
+                    e a ambição de Daenerys Targaryen, a filha exilada de um rei assassinado em uma outra guerra
+                    civil
+                    treze
+                    anos antes, prestes a voltar à sua terra e reivindicar seu trono de direito.</p>
+                <p>
+                    A série foi traduzida para quase 50 idiomas e vendeu mais de 90 milhões de exemplares
+                    mundialmente
+                    (até
+                    abril de 2019).[1] Todos os romances foram, em geral, muito bem recebidos pela crítica literária
+                    e
+                    pelo
+                    público, sendo indicados a diversos prêmios de fantasia e ficção científica, como o Prêmio
+                    Locus, o
+                    Prêmio
+                    Nebula e o Prêmio Hugo. No Brasil os livros são publicados pela editora Suma (anteriormente pela
+                    LeYa) e
+                    em
+                    Portugal pela Saída de Emergência.
+                </p>
+                <p>Os livros de As Crônicas de Gelo e Fogo foram adaptados para diversos formatos, como jogos de
+                    videogame,
+                    histórias em quadrinhos, bonecos em miniatura e uma série de TV intitulada Game of Thrones. A
+                    atração
+                    televisiva apresentou a saga a um maior número de leitores e lhe trouxe maior notoriedade,
+                    fazendo
+                    com
+                    que
+                    os quatro primeiros volumes da série surgissem entre os dez primeiros colocados na referencial
+                    lista
+                    de
+                    mais
+                    vendidos do jornal norte-americano The New York Times em 2011.</p>
+            </div>
+            <div id="imgGeorge">
+                <img src="assets/imgs/O Brabo.png" alt="">
+            </div>
+        </div>
+    </div>
+    <div id="sectionWorld">
+        <div id="world">
+            <div class="container">
+                <div id="sideText">
+                    <h3 id="headerWorld">O Incrivel continente de westero</h3>
+                    <p>Westeros é um continente vasto e ligeiramente estreito, estendendo-se do sul de Dorne até as
+                        Terras
+                        Para Lá da Muralha, onde presume-se que esteja a calota polar, no extremo norte, onde o
+                        território
+                        permanece amplamente desconhecido devido às suas baixas temperaturas e seus hostis habitantes,
+                        os
+                        selvagens.
+
+                        Suas fronteiras na costa leste são separadas de Essos pelo Mar Estreito e pela cadeia de ilhas
+                        conhecidas como os Degraus, onde outrora foi uma ponte de terra. A sul, no Mar de Verão,
+                        encontramos
+                        as Ilhas de Verão.
+
+                        As terras do Norte de Westeros são menos densamente povoadas do que as do sul, apesar de ter
+                        tamanho
+                        equivalente. As cinco principais cidade, da maior à menor, são: Porto Real, Vilavelha,
+                        Lannisporto,Vila Gaivota e Porto Branco.
+
+                        Westeros era originalmente dividido em vários reinos independentes antes da unificação ocorrida
+                        na
+                        Guerra da Conquista. Após a guerra, todas as nações ao sul da Muralha (exceto Dorne, que foi
+                        conquistada posteriomente), ficaram sob a monarquia da Casa Targaryen e conhecidas como os Sete
+                        Reinos.</p>
+                </div>
+
+
+                <video autoplay muted loop>
+                    <source src="assets/videos/got.mp4" type="video/mp4">
+                </video>
+
+            </div>
+        </div>
+    </div>
+    <div id="sectionFavorite">
+        <h3 id="favoriteHeader">Personagens Favoritos</h3>
+        <div class="container">
+
+            <div class="character">
+                <div class="cardPersona">
+                    <img src="assets/imgs/Jonh.png" alt="">
+                    <h3>Jonh Snow</h3>
+                </div>
+                <div class="cardText">
+                    <p>
+                        Jon Snow é o filho bastardo de Lorde Eddard Stark com uma mãe cuja identidade não é conhecida. Jon foi criado por seu pai ao lado dos seus meio-irmãos Robb, Sansa, Arya, Bran e Rickon Stark, mas juntou-se à Patrulha da Noite quando atingiu a idade adulta.
+                    </p>
+                    
+                </div>
+            </div>
+            <div class="character">
+                <div class="cardPersona">
+                    <img src="assets/imgs/Danerys.png" alt="">
+                    <h3>Danerys Targaryen</h3>
+                </div>
+                <div class="cardText">
+                    <p>
+                        Daenerys – "Dany" – é uma heroína cativante. Forte, determinada, corajosa e capaz de comandar dragões, ela já passou por grandes terrores, inclusive causados pela própria família. Os Targaryens são conhecidos pelo domínio que tiveram dos dragões ao longo da história.
+                    </p>
+                    
+                </div>
+            </div>
+            <div class="character">
+                <div class="cardPersona">
+                    <img src="assets/imgs/Tyron.png" alt="">
+                    <h3>Tyron Lanister</h3>
+                </div>
+                <div class="cardText">
+                    <p>
+                        Tyrion é educado, culto, calculista e perspicaz, mas recebe pouco respeito de seu pai por tais qualidades, por causa de sua deformidade, e pela morte de sua mãe durante seu parto. Tyrion é cruel com seus inimigos, mas possui grande simpatia para com os párias e as minorias.
+                    </p>
+                    
+                </div>
+            </div>
+            <div class="character">
+                <div class="cardPersona">
+                    <img src="assets/imgs/Arya.png" alt="">
+                    <h3>Arya Stark</h3>
+                </div>
+                <div class="cardText">
+                    <p>
+                        Arya Stark é a terceira filha de Lorde Eddard Stark e Catelyn Stark. No início do livro A Guerra dos Tronos, Arya tem nove anos de idade. Ela tem um irmão mais velho, Robb e dois irmãos mais novos, Bran e Rickon. Ela também tem uma irmã mais velha, Sansa, e um meio-irmão bastardo, Jon Snow.
+                    </p>
+                    
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <footer>
+        <div class="container">
+            <div id="level1">
+                <a href="#">
+                    <img src="assets/imgs/logo/logo.png" alt="">
+                </a>
+                <h3>Projeto de pesquisa e inovação <br>
+                    2022</h3>
+                <a href="#header">Volte ao Inicio</a>
+            </div>
+            <div id="level2">
+                <h3>Fanpage de Game Of Thrones</h3>
+                <a href="https://gameofthrones.fandom.com/wiki/Game_of_Thrones_Wiki">Referência Bibliográfica<img
+                        src="assets/icon/fandom.png" alt=""></a>
+                        
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
+<script>
+    limparErros();
+    sessionStorage.clear()
+    
+    function entrar() {
+        var emailVar = inpEmail.value;
+        var senhaVar = inpSenha.value;
+        if (emailVar == "" && senhaVar == "") {
+            div_erros_login.style = `display:block;`
+            div_erros_login.innerHTML = `Campos não podem estar vazio`
+            return false;
+        }
+        else if (emailVar == "") {
+            div_erros_login.style = `display:block;`
+            div_erros_login.innerHTML = `Prencha todos os campos`
+            return false;
+        }else if (senhaVar == "") {
+            div_erros_login.style = `display:block;`
+            div_erros_login.innerHTML = `Preencha o campo senha`
+            return false;
+        }
+        else {
+            
+        }
+        console.log("FORM LOGIN: ", emailVar);
+        console.log("FORM SENHA: ", senhaVar);
+        fetch("/usuarios/autenticar", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                emailServer: emailVar,
+                senhaServer: senhaVar
+            })
+        }).then(function (resposta) {
+            console.log("ESTOU NO THEN DO entrar()!")
+
+            if (resposta.ok) {
+                alert(`Seja bem vindo`)
+                console.log(resposta);
+                div_aguardar.style = `display:block;`
+                resposta.json().then(json => {
+                    console.log(json);
+                    console.log(JSON.stringify(json));
+                    sessionStorage.EMAIL_USUARIO = json.email;
+                    sessionStorage.NOME_USUARIO = json.nome;
+                    sessionStorage.ID_USUARIO = json.idUsuario;
+                    sessionStorage.MOEDA_USUARIO = json.moeda;
+                    sessionStorage.CASA_USUARIO = json.nomeCasa;
+                    sessionStorage.IMG_PERFIL = json.imgPerfil
+                    sessionStorage.BRASAO_CASA = json.brasaoCasa;
+                    sessionStorage.LEMA_CASA = json.lema;
+                    sessionStorage.BIO_USUARIO = json.bio;
+                    setTimeout(function () {
+                        window.location = "user/home.html";
+                    }, 2000); // apenas para exibir o loading
+                });
+
+            } else {
+                alert(`Usuario Invalido`)
+                console.log("Houve um erro ao tentar realizar o login!");
+                resposta.text().then(texto => {
+                    console.error(texto);
+                });
+            }
+        }).catch(function (erro) {
+            console.log(erro);
+        })
+        
+        return false;
+    }
+
+    
+</script>
